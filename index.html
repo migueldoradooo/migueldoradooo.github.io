@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas semanticas</title>
+    <style>
+        .body{
+            font-size:auto;
+        }
+        .header {
+            border: 3px solid black;
+            display:flex;
+            position: relative;
+            background-color: gray;
+            
+        }
+        .img-header{
+            width: 15%;
+            height: 15%;
+            margin-left: 1%;
+            margin-top: 2%;
+        }
+        .h1-header{
+            padding-left:18%;
+        }
+        .contacto-header{
+        text-align: end; /* o right */
+        padding-bottom: 9%;
+        padding-right: 9%;
+        margin-right: 15%;
+        bottom: 0%;
+        width: 100%;
+        position: absolute;
+    
+        }
+        .menu{
+            border: 1px solid black;
+            margin-top: 4%;
+            padding: 1%;
+            background-color: cornsilk;
+            
+        }
+        .menu-calendario{
+            padding-left:5%;
+        }
+        .menu-listas{
+        padding-left:9%;
+        }
+        .menu-web{
+        padding-left:8%;
+        }
+        .menu-multimedia{
+        padding-left:9%;
+        }
+        .menu-tablas{
+        padding-left:7%;
+        }
+
+        .aside{
+            align-items: stretch;
+            border:1px solid black;
+            width: 70%;
+            padding-bottom:4%;
+            padding-left: 4%;
+            padding-right: 4%;
+            background-color: aquamarine;
+            float: left;
+            margin-bottom: 0%;
+            height: 70%;
+        }
+        .main{
+            border: 1px solid black;
+            background-color: rgb(11, 245, 11);
+            height: 50%;
+    
+        }
+    
+
+    </style>
+</head>
+<body class="body" style="background-color:lightblue;">
+    <header class="header">
+        
+        <img src="./img/descarga.png" class="img-header" alt="2º SMR" class="img-header">
+        <h1 class="h1-header">Miguel Ángel</h1>
+        <a href="mailto:madoradom01@educarex.es" class="contacto-header">Contacto</a>
+    </header>
+    <nav class="menu">
+        <a href="./../estructura-miguel/porfolio/calendario.html" class="menu-calendario" >calendario</a>
+    
+        <a href="./../estructura-miguel/porfolio/listas.html" class="menu-listas">listas</a>
+
+        <a href="./../estructura-miguel/porfolio/Mi primera web.html" class="menu-web">Mi primera web</a>
+
+        <a href="./../estructura-miguel/porfolio/Multimedia.html"class="menu-multimedia">Multimedia</a>
+
+        <a href="./../estructura-miguel/porfolio/Tablas.html" class="menu-tablas">Tablas</a>
+
+    </nav>
+    <div >
+    <aside class="aside" style="width: 20%; ">
+        <h2 class="aside-busqueda">Busqueda</h2>
+        <a href="https://todofp.es/" >TodoFP</a>
+        <br>
+        <br>
+        <a href="https://www.educacionfpydeportes.gob.es/portada.html">Ministerio de Educacion y FP</a>
+        <br>
+        <br>
+        <iframe
+            src="https://www.google.com/maps?q=38.962528,-5.867056&z=14&output=embed"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <iframe
+            src="https://translate.google.com/translate?hl=es&sl=es&tl=en&u=https://tusitio.com"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+
+    </aside>
+    
+    <main class="main" style="width: 100%;">
+        <h2>Seo</h2>
+            <details>
+                <summary><strong>SEO</strong></summary>
+                  <p style="padding-left: 9%;"">Search Engine Optimization (Optimización paraMotores de Búsqueda), un conjunto de técnicas para mejorar la visibilidad de un sitio web en los resultados orgánicos de buscadores como Google. Su objetivo es aumentar el tráfico de calidad a un sitio web al hacerlo más relevante y fácil de entender para los motores de búsqueda. 
+                    Aspectos clave del SEO
+                    Optimización de contenido: Se crean contenidos de alta calidad y se utilizan palabras clave para que los buscadores entiendan de qué trata la página y la muestren en búsquedas relevantes.
+                    Optimización técnica: Se trabaja en la estructura del sitio, la velocidad de carga, la compatibilidad con dispositivos móviles y otros aspectos técnicos para que los buscadores puedan rastrear e indexar la página de manera eficiente.
+                    Link building: Se consigue que otros sitios web enlazan al tuyo, lo que mejora su autoridad y credibilidad ante los buscadores.
+                    Experiencia de usuario: Se enfoca en que el sitio sea útil, rápido y fácil de navegar para los visitantes, lo que a su vez favorece el posicionamiento.
+                    Análisis y adaptación: Se monitorea el rendimiento del sitio a través de herramientas como Google Analytics y Search Console, y se adapta la estrategia según los resultados y los cambios en los algoritmos de búsqueda. 
+        </details>
+    </main>
+    </div>
+</body>
+</html>
