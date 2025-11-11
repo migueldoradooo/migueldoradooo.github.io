@@ -1,0 +1,132 @@
+:root {
+  --bg: #e6e9ef;
+  --panel: #2b3138;
+  --btn: #f0f2f5;
+  --accent: #ff9f1c;
+  --op: #3b82f6;
+  --shadow: rgba(0, 0, 0, 0.25);
+  font-family: Inter, Roboto, Helvetica, Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: linear-gradient(180deg, #f6f8fb, #e6e9ef);
+}
+
+/* Calculadora */
+.calculator {
+  width: 360px;
+  max-width: 95vw;
+  background: linear-gradient(180deg, #3a3f46, #23272b);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 12px 30px var(--shadow);
+  color: #fff;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 12px;
+}
+
+/* Pantalla */
+.display {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 10px;
+  padding: 14px 18px;
+  text-align: right;
+  box-shadow: inset 0 -6px 18px rgba(0, 0, 0, 0.35);
+}
+.display .info {
+  font-size: 14px;
+  opacity: 0.6;
+  height: 18px;
+  overflow: hidden;
+}
+.display .main {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* Teclado */
+.pad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+button {
+  border: 0;
+  border-radius: 10px;
+  padding: 18px;
+  font-size: 18px;
+  cursor: pointer;
+  background: var(--btn);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  user-select: none;
+}
+button:active {
+  transform: translateY(2px);
+}
+
+/* Tipos de botones */
+.btn-utility {
+  background: #f2a3a3;
+  color: #2a2a2a;
+  font-weight: 600;
+}
+.btn-clear {
+  background: #ff6b6b;
+  color: white;
+}
+.btn-op {
+  background: var(--op);
+  color: white;
+  font-weight: 700;
+}
+.btn-equals {
+  grid-column: 4 / 5;
+  grid-row: 4 / 6;
+  background: linear-gradient(180deg, var(--accent), #ff7a00);
+  color: #fff;
+  font-size: 20px;
+}
+.btn-zero {
+  grid-column: 1 / 3;
+}
+
+/* Detalles */
+.top-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand {
+  font-weight: 700;
+  font-size: 14px;
+  opacity: 0.9;
+}
+.battery {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 420px) {
+  .calculator {
+    width: 320px;
+  }
+  .display .main {
+    font-size: 28px;
+  }
+  button {
+    padding: 14px;
+    font-size: 16px;
+  }
+}
