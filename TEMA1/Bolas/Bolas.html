@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Author" content="Miguel ángel">
+    <meta nme="Description" content="Primer-CSS">
+    <meta name="Keywords" content="HTML, CSS">
+
+    <!-- Twitter Cards -->
+<meta name="twitter:card" content="Primer-CSS - Pagina Principal" />
+<meta name="twitter:title" content="EDteam - Educación con honestidad" />
+<meta name="twitter:description" content="The Portfolio of Freelance Designer Nick Jones" />
+<meta name="twitter:image" content="https://drupal.ed.team/sites/default/files/inline-images/EDteam-card.jpg" />
+
+<!-- Open Graph para WhatsApp -->
+<meta property="og:title" content="Primer-CSS - Pagina Principal" />
+<meta property="og:description" content="The Portfolio of Freelance Designer Nick Jones" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ed.team/" />
+<meta property="og:image" content="https://drupal.ed.team/sites/default/files/inline-images/EDteam-card.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Open Graph para Instagram -->
+<meta property="og:title" content="Primer-CSS - Pagina Principal" />
+<meta property="og:description" content="The Portfolio of Freelance Designer Nick Jones" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ed.team/" />
+<meta property="og:image" content="https://drupal.ed.team/sites/default/files/inline-images/EDteam-card.jpg" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
+
+<!-- Open Graph para TikTok -->
+<meta property="og:title" content="Primer-CSS - Pagina Principal" />
+<meta property="og:description" content="The Portfolio of Freelance Designer Nick Jones" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ed.team/" />
+<meta property="og:image" content="https://drupal.ed.team/sites/default/files/inline-images/EDteam-card.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+    <style>   
+*{
+    margin: 6px;
+    padding: 0px;
+}
+.Parrafo-superior{
+    margin-top: 2%;
+    margin-right: 2%;
+    margin-left: 2%;
+    border: 5px inset black ;
+    text-align: center;
+    background-color: red;
+    height: 20%;
+    
+    border-radius: 10px;
+
+}
+
+.Parrafo-inferior{
+    /* margin es para el margen con otra caja*/
+    margin-top: 150px;
+    margin-right: 2%;
+    margin-left: 2%;
+    border: 5px groove black ;
+    text-align: center;
+    background-color: red;
+    height: 20%;
+    border-radius: 0px;
+
+}
+
+.Parrafo-lateral-1{
+    
+    border: 3px solid black;
+    background-color: rgb(0, 255, 0);
+    border-radius: 1000%;
+    text-align: center;
+    padding: 10px;
+    margin-right: 13%;
+    width: 33%;
+    height: auto;
+ 
+}
+
+.Parrafo-lateral-2 {
+   
+    border: 3px solid black;
+    background-color: rgb(0, 225, 255);
+    border-radius: 1000%;
+    text-align: center;
+    padding: 10px;
+    margin-right: 13%;
+    width: 33%;
+    height: auto;
+}
+.Parrafo-lateral-3{
+   
+    border: 3px solid black;
+    background-color: darkgray;
+    border-radius: 1000%;
+    text-align: center;
+    padding: 10px;
+    width: 33%;
+    height: auto;
+    margin-right: 13%;
+}
+.contenedor-interior {
+    display: flex;
+    overflow: hidden;
+    padding-bottom: 20px;
+    height: 40vh;
+    width: 105%;
+}
+#lateral-bajo{
+    /* para que las cajas tengan flexibilidad*/
+    display: flex;
+
+
+}
+
+.lat-bajo-derecha{
+    float:right;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding-left: 100px;
+    background-color: rgb(5, 236, 121);
+
+    
+   
+}
+
+.lat-bajo-izquierda{
+    float:left;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align:center;
+    background-color: aqua;
+    padding-right: 100px;
+    margin-left: 13px;
+}
+body{
+    background-color: rgb(165, 160, 90);
+}
+
+
+
+</style>
+
+</head>
+<body>
+    <!-- DIV para hacer cajas-->
+     <!--CLASS para aplicarle el CSS-->
+    <div class="Parrafo-superior">
+        <p>Parrafo superior</p>
+    </div>
+    <br>
+
+        <div class="contenedor-interior">
+            <div class="Parrafo-lateral-1">
+                <p>Parrafo lateral 1</p>
+            </div>
+
+            <div class="Parrafo-lateral-2">
+             <p>Parrafo lateral 2</p>
+            </div>
+            <div class="Parrafo-lateral-3"> 
+                <p>Parrafo lateral 3 </p>
+            </div>
+
+        </div>
+
+            <div class="lateral-bajo">
+               <div class="lat-bajo-izquierda"id="lat_bajo_izquierda"> <p>Lateral bajo izquierda</p></div>
+            </div>
+
+            <div>
+                <div class="lat-bajo-derecha"> <p>Lateral bajo derecha</p></div>
+            </div>
+
+        <div class="Parrafo-inferior">
+            <p>Parrafo inferior</p>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

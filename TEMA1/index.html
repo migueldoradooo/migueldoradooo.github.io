@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Principal</title>
+    <meta name="Author" content="Miguel ángel">
+    <meta nme="Description" content="Pagina Principal">
+    <meta name="Keywords" content="HTML, CSS">
+    <link rel="shortcut icon"  type="ico" href="./Head-Completo/img/html5.png">
+    
+    <!-- Twitter Cards -->
+<meta name="twitter:card" content="Pagina Principal" />
+<meta name="twitter:title" content="EDteam - Educación con honestidad" />
+<meta name="twitter:description" content="The Portfolio of Freelance Designer Nick Jones" />
+<meta name="twitter:image" content="https://drupal.ed.team/sites/default/files/inline-images/EDteam-card.jpg" />
+
+<!-- Open Graph para WhatsApp -->
+<meta property="og:title" content="Pagina Principal" />
+<meta property="og:description" content="The Portfolio of Freelance Designer Nick Jones" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ed.team/" />
+<meta property="og:image" content="https://drupal.ed.team/sites/default/files/inline-images/EDteam-card.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Open Graph para Instagram -->
+<meta property="og:title" content="Pagina Principal" />
+<meta property="og:description" content="The Portfolio of Freelance Designer Nick Jones" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ed.team/" />
+<meta property="og:image" content="https://drupal.ed.team/sites/default/files/inline-images/EDteam-card.jpg" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
+
+<!-- Open Graph para TikTok -->
+<meta property="og:title" content="Pagina Principal" />
+<meta property="og:description" content="The Portfolio of Freelance Designer Nick Jones" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ed.team/" />
+<meta property="og:image" content="https://drupal.ed.team/sites/default/files/inline-images/EDteam-card.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<link rel="stylesheet" href="./CSS/Css-Index.css">
+</head>
+<body>
+    <div style="height: 10vh;">
+    <header class="header">
+        <img src="./Proyecto-2/img/descarga.png" alt="SMR" style="text-align: left;display: flex;width: 5vw; padding:1%">
+
+        <h1 style="padding-top:4%; padding-bottom: 5%;text-align:center;">Tareas Realizadas este Trimestre</h1>
+        <br>
+        <br>
+        <div style="text-align: right;margin-bottom: 0.1%;">
+
+        <a href="https://github.com/migueldoradooo" target="_blank">
+            <button style="padding: 0.5%;margin-bottom: 1%; margin-right:3%;" >Github</button>
+        </a>
+        <button type="button" class="button" onclick="document.getElementById('fechayhora').innerHTML = Date()
+        ">Fecha y Hora</button>
+
+        </div>
+        <p id="fechayhora"></p>
+    </header>
+    <nav class="nav">
+        <a href="./Ancors/posiciones.html" class="links-nav">Posiciones</a>
+        
+        
+        <a href="./Bolas/Bolas.html" class="links-nav">Bolas</a>
+        
+        
+        <a href="./calculadorado-javascript/calculadora.html" class="links-nav">Calculadora</a>
+        
+        
+        <a href="./EstructuraMiguel/Botones.html" class="links-nav">Botones</a>
+        
+        
+        <a href="./Head-Completo/Head-Completo.html" class="links-nav">Etiqueta Meta</a>
+
+
+        <a href="./Intoduccion_JAVASCRIPT/MiprimerJavaScript.html" class="links-nav">Mi primer JavaScript</a>
+        
+        
+        <a href="./Proyecto/ArchivoIntroduccionCss.html" class="links-nav">Archivo de Introduccion a CSS</a>
+        
+        
+        <a href="./Proyecto-2/InicioWeb.html" class="links-nav">Pagina principal de una Web</a>
+        <br>
+        <br>
+        <div>
+        <a href="./Proyecto-3/MapaInteractivoEuropaOccidental.html" class="links-nav" >Mapa Interactivo de Europa MapaInteractivoEuropaOccidental</a>
+        
+        
+        <a href="./SEO/SEO.html" class="links-nav">¿Que es SEO?</a>
+        
+        
+        
+        </div>
+    </nav>
+    <div class="div-aside-main">
+    <aside class="aside-index">
+            <a href="#Posiciones" class="links-aside"  >Posiciones</a>
+            <br>
+            <a href="#bolas" class="links-aside">Bolas</a>
+            <br>
+            <a href="#Calculadora" class="links-aside"  >Calculadora</a>
+            <br>
+            <a href="#Botones" class="links-aside"  >Botones</a>
+            <br>
+            <a href="#Etiqueta" class="links-aside"  >Etiqueta Meta</a>
+            <br>
+            <a href="#JavaScript" class="links-aside"  >Mi primer JavaScript</a>
+            <br>
+            <a href="#CSS" class="links-aside"  >Archivo de Introduccion a CSS</a>
+            <br>
+            <a href="#principal" class="links-aside"  >Pagina principal de una Web</a>
+            <br>
+            <a href="#Europa" class="links-nav" >Mapa Interactivo de Europa</a>
+            <br>
+            <a href="#SEO" class="links-aside"  >¿Que es SEO?</a>
+            <br>
+            
+            <br>
+        </aside>
+        <main class="main-index">
+            <h3 id="Posiciones">Posiciones</h3>
+            <p>Este código HTML5 define la estructura de la página usando cuatro elementos div: dos con la clase cuadro para crear figuras de 200x200px (uno rojo arribaiz movido 50px hacia abajo y otro verde derecha posicionado en el extremo derecho de la ventana), uno con la clase bola que es un círculo grande centrado horizontalmente y dimensionado con respecto a la ventana (vw/vh), y un pie que es una barra amarilla de 50px de altura anclada en la parte inferior de la pantalla; el CSS utiliza el selector universal * para eliminar márgenes y rellenos predeterminados, aplica position: relative para el posicionamiento y centrado preciso de los elementos, y define efectos de transición en :hover para que los tres elementos principales (los dos cuadros y la bola) cambien de color y se eleven y escalen ligeramente de forma animada al pasar el ratón.</p>
+            <br>
+            <h3 id="bolas">Bolas</h3>
+            <p>Este código HTML5 establece la estructura de la página utilizando el modelo de caja de CSS, donde un div superior y otro inferior (Parrafo-superior, Parrafo-inferior) actúan como barras de encabezado y pie con bordes y fondo rojo, mientras que el contenido central se organiza mediante un contenedor flexible (contenedor-interior con display: flex) para alinear horizontalmente tres elementos circulares (Parrafo-lateral-1, -2, -3), a los que se suman dos cajas flotantes (float: left y float: right) para la parte inferior, siendo el objetivo principal del código el posicionamiento de estas cajas y la optimización del contenido para compartir en redes sociales gracias al uso intensivo de etiquetas meta de Open Graph y Twitter Cards en el &lt;head&gt;, las cuales definen el título, la descripción y la imagen de vista previa para plataformas como WhatsApp, Instagram y Twitter.</p>
+            <br>
+            <h3 id="Calculadora">Calculadora</h3>
+            <p>Este código está diseñado para simular la interfaz de una calculadora llamada "Calculadora Hcode" y utiliza un enfoque avanzado de gráficos vectoriales (SVG), en lugar de etiquetas HTML estándar, para construir toda la estructura visual de la carcasa, la pantalla digital y cada botón; la parte del &lt;body&gt; se compone solo de contenedores (&lt;div class=&quot;outer&quot;&gt; y &lt;div class=&quot;middle&quot;&gt;) cuya única función es centrar perfectamente el gráfico SVG en el centro de la pantalla del navegador, y la porción CSS que no define el estilo del SVG se dedica a un extenso "reset" para normalizar la apariencia de elementos en todos los navegadores, mientras que el estilo de los números y el texto de la pantalla se define con una fuente personalizada llamada &apos;Digital-7&apos;.</p>
+            <br>
+            <h3 id="Botones">Botones</h3>
+            <p>La página es un índice simple que utiliza la etiqueta &lt;h1&gt; para el título principal y las etiquetas &lt;a&gt; (enlaces) que envuelven elementos &lt;button&gt; para crear botones de navegación. Estos botones dirigen al usuario a diferentes archivos HTML (como listas.html, Multimedia.html, Tablas.html y calendario.html), asumiendo que residen en una subcarpeta llamada porfolio (ej. ./porfolio/listas.html); el estilo CSS es minimalista, eliminando márgenes y rellenos por defecto, estableciendo un fondo gris y centrando el título y los enlaces en la página; no obstante, la característica más notable del código es el extenso conjunto de etiquetas &lt;meta&gt; de Open Graph y Twitter Cards en el &lt;head&gt;, cuyo propósito es asegurar que la página se muestre con un título, descripción e imagen consistentes y atractivos cuando se comparta en redes sociales como Twitter, WhatsApp, Instagram y TikTok.</p>
+            <br>
+            <h3 id="Etiqueta">Etiqueta Meta</h3>
+            <p>El código es una página web de ejemplo y repaso que, aunque es visualmente simple, es técnicamente compleja, pues su &lt;head&gt; está muy completo: incluye metadatos básicos de autor y SEO, un favicon para la pestaña, enlaces a dos hojas de estilo CSS externas, estilos internos en cascada para elementos como p, .estiloHead e #estilos-id, enlaces a una fuente de Google Fonts y etiquetas de Open Graph para optimizar la previsualización del contenido en redes sociales, además de vincular un script de JavaScript externo; por su parte, el &lt;body&gt; contiene un enlace (&lt;a&gt;) al sitio web de un IES, un párrafo con un resumen sobre Git, dos elementos interactivos &lt;details&gt;/&lt;summary&gt; que permiten expandir o contraer las definiciones de SEO y Open Graph, y un marco incrustado (&lt;iframe&gt;) que intenta cargar un recurso externo (un mapa), demostrando en conjunto la estructura básica de una página y el uso de la cascada de estilos.</p>
+            <br>
+            <h3 id="JavaScript">Mi primer JavaScript</h3>
+            <p>Este código HTML es un conjunto de cuatro ejercicios prácticos que demuestran la manipulación directa del DOM de la página usando código JavaScript incrustado en los atributos onclick de los botones, todos sobre un fondo amarillo definido por el CSS; el Ejercicio 1 cambia el texto de un párrafo, el Ejercicio 2 alterna entre tres imágenes de expresiones faciales diferentes modificando el atributo src, el Ejercicio 3 implementa un interruptor de modo claro/oscuro cambiando los estilos de background-color y color del &lt;body&gt; y alternando la visibilidad de los botones Día y Noche, y finalmente, el Ejercicio 4 utiliza sentencias if/else y las propiedades style.display y hidden para hacer que una imagen de un árbol aparezca o desaparezca, actualizando también el texto del botón en cada interacción.</p>
+            <br>
+            <h3 id="CSS">Archivo de Introduccion a CSS</h3>
+            <p>Este código HTML establece una página de inicio simple cuyo objetivo es enlazar y mostrar archivos multimedia locales (una imagen y un video) y proporcionar enlaces de navegación a otras páginas (SEO.html, calculadora.html), con el estilo controlado por una hoja de estilos externa (main.css); sin embargo, la característica más prominente de la página es el extenso conjunto de etiquetas meta de Open Graph y Twitter Cards en el &lt;head&gt;, las cuales se utilizan repetidamente para asegurar que el contenido se muestre de manera optimizada y coherente con títulos y miniaturas atractivas cuando la URL se comparte en diversas plataformas de redes sociales (WhatsApp, Instagram, TikTok y Twitter).</p>
+            <br>
+            <h3 id="principal">Pagina principal de una Web</h3>
+            <p>La página utiliza un diseño de estructura semántica (&lt;header&gt;, &lt;nav&gt;, &lt;aside&gt;, &lt;main&gt;), donde el &lt;header&gt; (con estilos display:flex y position: relative) contiene un logo, el título &quot;Miguel Ángel&quot;, y un enlace de contacto posicionado absolutamente; el menú de navegación (&lt;nav&gt;) enlaza a varias páginas internas (calendario.html, listas.html, etc.) con estilos de espaciado específicos; el cuerpo principal se divide en una barra lateral &lt;aside&gt; (flotada a la izquierda con float: left), que contiene enlaces a recursos educativos y dos &lt;iframe&gt; (uno para un mapa y otro para un traductor de Google), y el área de contenido principal &lt;main&gt;, que presenta una explicación detallada sobre SEO encapsulada en un elemento interactivo &lt;details&gt;/&lt;summary&gt; para ocultar/mostrar la información; además de estos elementos estructurales y el CSS interno para la maquetación, el &lt;head&gt; incluye metadatos básicos y un conjunto completo de etiquetas Open Graph y Twitter Cards para asegurar que la página se comparta de forma atractiva en plataformas sociales.</p>
+            <br>
+            <h3 id="Europa">Mapa Interactivo de Europa</h3>
+            <p>La página presenta un título central (&lt;h1&gt;) sobre un fondo azul claro y utiliza una etiqueta &lt;img&gt; para mostrar el mapa ibérico, al cual se le añade el atributo usemap=&quot;#peninsula&quot; para transformarlo en un mapa de imagen interactivo; el elemento &lt;map name=&quot;peninsula&quot;&gt; define las áreas clicables, enlazando formas específicas (círculo y polígonos/rectángulos definidos por coordenadas) a sus respectivas páginas de Wikipedia: un círculo para Mallorca, un polígono para España, y rectángulos para Portugal y Francia, mientras que, en el &lt;head&gt;, la página incluye metadatos básicos y un conjunto exhaustivo de etiquetas Open Graph y Twitter Cards para garantizar una previsualización de contenido optimizada al compartirse en plataformas sociales.</p>
+            <br>
+            <h3 id="SEO">¿Que es SEO?</h3>
+            <p>La página presenta una lección sobre SEO sobre un fondo azul, haciendo un uso educativo de numerosas etiquetas semánticas para el formato de texto y la marcación de contenido, tales como &lt;h1&gt; y &lt;h3&gt; para títulos, &lt;abbr&gt; para las siglas (con una imagen anidada en el título principal), &lt;strong&gt; y &lt;em&gt; para énfasis, &lt,mark&gt;, &lt;del&gt;, e &lt;ins&gt; para ediciones de texto, &lt;dfn&gt; para definir conceptos clave, &lt;pre&gt;&lt;code&gt; para mostrar código de ejemplo, &lt;kbd&gt; y &lt;samp&gt; para simular la interacción usuario-sistema, &lt;var&gt; para variables técnicas, &lt;cite&gt; para citar fuentes, y &lt;ul&gt; con &lt;li&gt; para listar puntos, mientras que la sección &lt;head&gt; es extensa y se centra en metadatos para SEO y la optimización de la compartición en redes sociales, incluyendo un conjunto completo y repetitivo de etiquetas Open Graph y Twitter Cards para controlar la apariencia de la página al ser enlazada en plataformas como WhatsApp, Instagram y TikTok.</p>
+        
+        </main>
+    </div>
+    <footer class="footer-index">
+        
+        <p style="padding-left:40%; padding-top:2%;">&#8734 Proyecto Final del Trimestre &#8734</p>
+        <p style="margin-left: 30%; padding-top:2%;">Miguel Ángel Dorado Moreno</p>
+
+    </footer>
+    </div>
+</body>
+</html>
