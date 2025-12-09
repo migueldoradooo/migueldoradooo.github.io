@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="ico" type="image/ico "src="./img/tortuga.ico">
+    <link rel="stylesheet" href="./CSS/css-formularios.css">
+</head>
+<body>
+
+    
+    <h1 style="text-align: center;font-size: 90px;"> Formularios</h1>
+    <br>
+    <br>
+    <div class="div">
+        <form action="/submit" method="post">   
+
+            <fieldset>
+            <legend class="Datos"><strong>Datos personales</strong></legend>
+                <label for="nombre">Nombre: </label><br>
+                <input type="text" id="nombre" name="nombre" required placeholder="Nombre" class="nombre">
+                <br>
+                <br>
+                <br>
+                <label for="email">Correo electronico: </label><br>
+                <input type="email" id="email" name="email" required placeholder="Correo Electronico" class="Correoelectronico">
+                <br>
+                <br>
+                <br>
+                <label for="contraseña">Contraseña;</label><br>
+             <input type="password" id="contraseña" name="contraseña" required placeholder="Contraseña" class="contraseña">
+                <br>
+                <br>
+                <br>
+                <label for="confirmar_contraseña">Confirmar contraseña:</label><br>
+                <input type="password" id="confirmar_contraseña" name="confirmar_contraseña" required placeholder="Confirmar contraseña" class="confirmacion">
+                <br>
+                <br>
+                <br>
+                <label for="telefono">Nº Telefonico: </label><br>
+                <input type="tel" id="telefono" name="telefono" required placeholder="Telefono" class="telefono">
+                <br>
+                <br>
+                <br>
+                <textarea id="mensaje" name="mensaje" rows="9" cols="50" required placeholder="Mensaje" class="mensaje"></textarea>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <label for="opciones" >Elige un Genero:</label>
+                <select name="" id="" required>   
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="Helicoptero">Helicoptero</option>
+                    <option value="Tractor">Tractor</option>
+                </select>
+                <br>
+                <br>
+
+            <label>Fecha de nacimiento: </label>
+                <input type="date" id="hora" name="hora" required class="fecha-nacimiento">
+            <br>
+                <br>
+                <label for="color_favorito">Selecciona tu color favorito:</label>
+                <input type="color" id="color_favorito" name="color_favorito" required class="color-favorito">
+                <br><br>
+                <label for="CV"> Introduce el CV</label>
+                <input type="file" id="CV" class="curriculum">
+            </fieldset>
+            <br><br>
+            <fieldset> 
+                <legend class="Horario">Horario de trabajo</legend> 
+                <br>
+                <br>
+                <label for="hora">Selecciona una hora de entrada: </label>
+                <input type="time" id="hora" name="hora" required>
+                <br>
+                <br>
+                <label>Selecciona una hora de salida:</label>
+                <input type="time" id="hora_salida" name="hora_salida" required> 
+                <br>
+                <br>
+                <br>
+                <br>
+            </fieldset>
+
+            <br>
+            <br>
+            <label for="Informacion_correoElectronico" class="info"><strong>Desea recibir Ofertas mediante el correo electronico</strong></label>
+            <br>
+            <br>
+            <input type="radio" id="si" name="ofertas" value="si" required >
+            <label for="si">Si</label>
+            <input type="radio" id="no" name="ofertas" value="no" required>
+            <label for="no">No</label>
+            <br><br><br>
+            <input type="submit" value="Enviar" style="width: 4vw;">
+            <input type="reset" value="Borrar" style="width: 4vw;">
+        </form>
+    </div>
+</body>
+</html>
+
+

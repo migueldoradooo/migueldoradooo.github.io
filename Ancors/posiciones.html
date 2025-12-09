@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posiciones</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .cuadro{
+            width: 200px;
+            height: 200px;
+
+        }
+
+        .arribaiz{
+            position: relative;
+            top: 50px;
+            background-color: red;
+            opacity: 50%;
+        }
+
+        .derecha{
+            position: relative;
+            margin-left: calc(100vw - 200px );
+            background-color: green;
+            opacity: 50%;
+            
+        }
+        .pie{
+            width: 100vw;
+            height: 50px;
+            background-color: yellow;
+            margin-top: calc(100vh - 50px);
+            
+        }
+        .bola{
+            width: 25vw;
+            height: 25vh;
+            background-color: palevioletred;
+            border-radius: 50%;
+            margin-left: calc(50vw - 12.5vw);
+            margin-right: calc(50vw - 12.5vw);
+
+        }
+        .bola:hover {
+            background-color: aqua;
+            transform: translateY(-20px);
+            transform: scale(1.2);
+            transition: all 0.5s ease-in;
+        }
+        .derecha:hover {
+            background-color: rgb(255, 0, 0);
+            transform: translateY(-20px);
+            transform: scale(1.2);
+            transition: all 0.5s ease-in;
+        }
+        .arribaiz:hover {
+            background-color: rgb(179, 255, 0);
+            transform: translateY(-20px);
+            transform: scale(1.2);
+            transition: all 0.5s ease-in;
+        }
+        body{
+            background-color: rgb(80, 252, 0);
+        }
+
+    </style>
+</head>
+<body>
+        <div class="cuadro arribaiz"></div>
+            <div class="bola"></div>    
+        <div class="cuadro derecha"></div>
+
+    <div class="pie"></div>
+</body>
+</html>
