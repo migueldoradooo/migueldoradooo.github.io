@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplicación de lista de tareas con inicio de sesión Firebase.">
+    <title>TaskFlow — Tu Lista de Tareas Inteligente</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ============================================
+         PANTALLA DE AUTH (Login / Registro)
+         ============================================ -->
+    <div id="auth-screen" class="auth-screen">
+        <div class="auth-bg">
+            <div class="auth-orb auth-orb-1"></div>
+            <div class="auth-orb auth-orb-2"></div>
+            <div class="auth-orb auth-orb-3"></div>
+        </div>
+
+        <div class="auth-container">
+            <div class="auth-card glass-card">
+                <!-- Logo -->
+                <div class="auth-logo">
+                    <div class="logo-mark">
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                            <rect width="36" height="36" rx="10" fill="url(#logoGrad)"/>
+                            <path d="M11 18.5L15.5 23L25 13" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <defs>
+                                <linearGradient id="logoGrad" x1="0" y1="0" x2="36" y2="36">
+                                    <stop stop-color="#6366f1"/>
+                                    <stop offset="1" stop-color="#a78bfa"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <span class="logo-name">Task<span class="accent">Flow</span></span>
+                </div>
+
+                <!-- Auth Tabs -->
+                <div class="auth-tabs">
+                    <button class="auth-tab active" data-tab="login" id="tab-login">Iniciar Sesión</button>
+                    <button class="auth-tab" data-tab="register" id="tab-register">Registrarse</button>
+                    <div class="tab-indicator"></div>
+                </div>
+
+                <!-- Login Form -->
+                <form id="login-form" class="auth-form active">
+                    <div class="form-group">
+                        <label for="login-email">Correo electrónico</label>
+                        <div class="input-wrapper">
+                            <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M22 4L12 13 2 4"/></svg>
+                            <input type="email" id="login-email" placeholder="tu@email.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Contraseña</label>
+                        <div class="input-wrapper">
+                            <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1"/></svg>
+                            <input type="password" id="login-password" placeholder="••••••••" required>
+                            <button type="button" class="toggle-password" aria-label="Mostrar contraseña">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full" id="login-btn">
+                        <span>Iniciar Sesión</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                    <div class="auth-divider">
+                        <span>o continúa con</span>
+                    </div>
+                    <button type="button" class="btn btn-google" id="google-login-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                        <span>Google</span>
+                    </button>
+                </form>
+
+                <!-- Register Form -->
+                <form id="register-form" class="auth-form">
+                    <div class="form-group">
+                        <label for="register-name">Nombre</label>
+                        <div class="input-wrapper">
+                            <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                            <input type="text" id="register-name" placeholder="Tu nombre" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Correo electrónico</label>
+                        <div class="input-wrapper">
+                            <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M22 4L12 13 2 4"/></svg>
+                            <input type="email" id="register-email" placeholder="tu@email.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Contraseña</label>
+                        <div class="input-wrapper">
+                            <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1"/></svg>
+                            <input type="password" id="register-password" placeholder="Mínimo 6 caracteres" required minlength="6">
+                            <button type="button" class="toggle-password" aria-label="Mostrar contraseña">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full" id="register-btn">
+                        <span>Crear Cuenta</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                    <div class="auth-divider">
+                        <span>o continúa con</span>
+                    </div>
+                    <button type="button" class="btn btn-google" id="google-register-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                        <span>Google</span>
+                    </button>
+                </form>
+
+                <!-- Error message -->
+                <div id="auth-error" class="auth-error" role="alert"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         PANTALLA PRINCIPAL (App de Tareas)
+         ============================================ -->
+    <div id="app-screen" class="app-screen hidden">
+        <!-- Animated Background -->
+        <div class="app-bg">
+            <div class="app-orb app-orb-1"></div>
+            <div class="app-orb app-orb-2"></div>
+        </div>
+
+        <!-- Top Nav -->
+        <nav class="app-nav">
+            <div class="app-nav-inner">
+                <div class="nav-left">
+                    <div class="logo-mark small">
+                        <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
+                            <rect width="36" height="36" rx="10" fill="url(#logoGrad2)"/>
+                            <path d="M11 18.5L15.5 23L25 13" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <defs>
+                                <linearGradient id="logoGrad2" x1="0" y1="0" x2="36" y2="36">
+                                    <stop stop-color="#6366f1"/>
+                                    <stop offset="1" stop-color="#a78bfa"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <span class="nav-brand">Task<span class="accent">Flow</span></span>
+                </div>
+                <div class="nav-right">
+                    <div class="user-info">
+                        <div class="user-avatar" id="user-avatar">U</div>
+                        <span class="user-name" id="user-name">Usuario</span>
+                    </div>
+                    <button class="btn-icon" id="logout-btn" title="Cerrar sesión">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="app-main">
+            <div class="app-container">
+                <!-- Welcome Header -->
+                <header class="app-header">
+                    <div class="header-text">
+                        <h1 id="greeting">Buenos días 👋</h1>
+                        <p id="date-display">Cargando fecha...</p>
+                    </div>
+                    <div class="header-stats">
+                        <div class="mini-stat">
+                            <span class="mini-stat-num" id="stat-total">0</span>
+                            <span class="mini-stat-label">Total</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-stat-num accent-green" id="stat-done">0</span>
+                            <span class="mini-stat-label">Hechas</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-stat-num accent-amber" id="stat-pending">0</span>
+                            <span class="mini-stat-label">Pendientes</span>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Add Task -->
+                <div class="add-task-section glass-card">
+                    <form id="add-task-form" class="add-task-form">
+                        <div class="add-task-input-wrap">
+                            <svg class="add-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                            <input type="text" id="task-input" placeholder="¿Qué necesitas hacer?" required autocomplete="off">
+                        </div>
+                        <div class="add-task-options">
+                            <div class="priority-selector">
+                                <button type="button" class="priority-btn active" data-priority="baja" title="Prioridad baja">
+                                    <span class="priority-dot low"></span>
+                                    <span>Baja</span>
+                                </button>
+                                <button type="button" class="priority-btn" data-priority="media" title="Prioridad media">
+                                    <span class="priority-dot medium"></span>
+                                    <span>Media</span>
+                                </button>
+                                <button type="button" class="priority-btn" data-priority="alta" title="Prioridad alta">
+                                    <span class="priority-dot high"></span>
+                                    <span>Alta</span>
+                                </button>
+                            </div>
+                            <select id="task-category" class="category-select">
+                                <option value="general">📋 General</option>
+                                <option value="trabajo">💼 Trabajo</option>
+                                <option value="personal">🏠 Personal</option>
+                                <option value="estudio">📚 Estudio</option>
+                                <option value="salud">💪 Salud</option>
+                            </select>
+                            <button type="submit" class="btn btn-primary btn-add">
+                                <span>Añadir</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Filters -->
+                <div class="filters-bar">
+                    <div class="filter-tabs">
+                        <button class="filter-tab active" data-filter="todas">Todas</button>
+                        <button class="filter-tab" data-filter="pendientes">Pendientes</button>
+                        <button class="filter-tab" data-filter="completadas">Completadas</button>
+                    </div>
+                    <div class="filter-actions">
+                        <div class="search-wrap">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                            <input type="text" id="search-input" placeholder="Buscar tarea..." class="search-input">
+                        </div>
+                        <button class="btn-icon-sm" id="clear-completed-btn" title="Limpiar completadas">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Task List -->
+                <div id="task-list" class="task-list">
+                    <!-- Las tareas se generan dinámicamente -->
+                </div>
+
+                <!-- Empty State -->
+                <div id="empty-state" class="empty-state">
+                    <div class="empty-illustration">
+                        <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+                            <circle cx="60" cy="60" r="50" fill="rgba(99,102,241,0.08)" stroke="rgba(99,102,241,0.2)" stroke-width="1"/>
+                            <rect x="35" y="38" width="50" height="8" rx="4" fill="rgba(99,102,241,0.15)"/>
+                            <rect x="35" y="52" width="38" height="8" rx="4" fill="rgba(139,92,246,0.15)"/>
+                            <rect x="35" y="66" width="44" height="8" rx="4" fill="rgba(167,139,250,0.15)"/>
+                            <path d="M42 82L48 88L58 78" stroke="rgba(99,102,241,0.4)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>No hay tareas todavía</h3>
+                    <p>Añade tu primera tarea para empezar a organizar tu día</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- ============================================
+         FIREBASE SDK
+         ============================================ -->
+    <!-- 
+    ╔══════════════════════════════════════════════════════════════╗
+    ║  🔥 PASO 1: AÑADIR EL SDK DE FIREBASE                      ║
+    ║                                                              ║
+    ║  Descomenta las siguientes líneas y asegúrate de usar        ║
+    ║  las últimas versiones del SDK.                              ║
+    ║                                                              ║
+    ║  Puedes obtener estos scripts desde:                         ║
+    ║  https://firebase.google.com/docs/web/setup                  ║
+    ╚══════════════════════════════════════════════════════════════╝
+    -->
+
+    <!-- DESCOMENTA ESTAS LÍNEAS PARA AÑADIR FIREBASE -->
+    <!--
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+    -->
+
+    <script src="firebase-config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
